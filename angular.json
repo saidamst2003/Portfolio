@@ -26,9 +26,11 @@
                 "input": "public"
               }
             ],
+            
             "styles": [
               "src/styles.css"
             ],
+
             "scripts": []
           },
           "configurations": {
@@ -38,6 +40,11 @@
                   "type": "initial",
                   "maximumWarning": "500kB",
                   "maximumError": "1MB"
+                },
+                {
+                  "plugins": {
+                    "@tailwindcss/postcss": {}
+                  }
                 },
                 {
                   "type": "anyComponentStyle",
@@ -92,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "2eb87c7f-9814-4ffd-af7a-d55a80d9f8cd"
   }
 }
