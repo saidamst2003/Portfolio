@@ -1,0 +1,10 @@
+.back {
+    background-image: url('../../../public/images/pa.jpg'); /* Remplace 'images/pa.jpg' par le chemin de ton image */
+    background-size: cover;      /* L'image couvre toute la page */
+    background-position: center; /* L'image est centrée */
+    background-repeat: no-repeat; /* L'image ne se répète pas */
+    background-blend-mode: overlay; 
+}
+.links{
+    z-index: 999;
+}
