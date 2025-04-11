@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import {NavbarComponent} from './navbar/navbar.component';
 import {MaisonComponent} from'./maison/maison.component';
 import {AproposComponent}from'./apropos/apropos.component';
-import {ExperienceeComponent}from'./experiencee/experiencee.component'
+import {ExperienceeComponent}from'./experiencee/experiencee.component';
+import{ContactComponent}from'./contact/contact.component'
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,NavbarComponent,MaisonComponent,AproposComponent,ExperienceeComponent],
+  imports: [RouterOutlet,NavbarComponent,MaisonComponent,AproposComponent,ExperienceeComponent,ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

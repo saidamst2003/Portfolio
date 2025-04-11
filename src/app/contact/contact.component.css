@@ -1,0 +1,25 @@
+.back {
+    background-image: url('../../../public/images/pa.jpg'); 
+    background-size: cover;     
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-blend-mode: overlay; 
+}
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+    0% { transform: translateX(50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+
+  .animate-slideIn {
+    animation: slideIn 1.5s ease-out forwards;
+  }
