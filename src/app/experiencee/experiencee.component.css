@@ -1,75 +1,84 @@
-.skills-section {
-    background: rgba(255, 60, 190, 0.619);
-    padding: 3rem 1rem;
-    text-align: center;
-    font-family: 'Segoe UI', sans-serif;
+.tim {
+	background-image: url('../../../public/images/pa.jpg'); 
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-blend-mode: overlay;
   }
   
-  .skills-section h2 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 2rem;
-    animation: fadeInDown 0.8s ease-in-out;
+  ul.timeline {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(3, 220px);
+	justify-content: center;
   }
   
-  .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
+  .timeline li {
+	grid-column: span 2;
+	text-align: center;
+	border-radius: 65px;
+	color: #030303;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 1.5em;
+	font-family: sans-serif;
+	position: relative;
+	padding: 20px;
+	border: 20px solid #fae5e500;
+	background: 
+	  linear-gradient(#ffffff 0 0) content-box,
+	  linear-gradient(var(--c, #cf88c3) 0 0) padding-box,
+	  linear-gradient(var(--d, 90deg), #0000 75%, #ee58d2 0) border-box;
   }
   
-  .skill-card {
-    width: 120px;
-    height: 140px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.4s ease, background-color 0.3s;
-    animation: popIn 0.5s ease;
+  .timeline li:nth-child(even) {
+	grid-column-end: -1;
+	--d: -90deg;
+	--c: #fecff0;
   }
   
-  .skill-card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 0.5rem;
+  .timeline li:not(:last-child) {
+	margin-bottom: -20px;
   }
   
-  .skill-card span {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #333;
+  .timeline li:before,
+  .timeline li:after {
+	content: "";
+	display: block;
+	height: 0.6em;
   }
   
-  .skill-card:hover {
-    transform: translateY(-8px) scale(1.05);
-    background-color: #e8f5e9;
+  .timeline time {
+	position: absolute;
+	font-size: 0.75em;
+	left: calc(100% + 50px);
+	top: 50%;
+	transform: translateY(-50%);
+	white-space: nowrap;
+	color: white;
   }
   
-  /* Animations */
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .timeline li:nth-child(even) time {
+	left: auto;
+	right: calc(100% + 50px);
+	color: white;
   }
   
-  @keyframes popIn {
-    from {
-      opacity: 0;
-      transform: scale(0.85);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+  .timeline time:before {
+	content: "";
+	position: absolute;
+	height: 10px;
+	top: calc(50% - 5px);
+	right: calc(100% + 5px);
+	width: 65px;
+	background: repeating-linear-gradient(-90deg, #eeeeeb 0 5px, #eeeeeb 0 10px) 50% / 100% 2px no-repeat;
+  }
+  
+  .timeline li:nth-child(even) time:before {
+	right: auto;
+	left: calc(100% + 5px);
+	background: repeating-linear-gradient(90deg, #dde4e7 0 5px, #eeeeeb 0 10px) 50% / 100% 2px no-repeat;
   }
   
