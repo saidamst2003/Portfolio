@@ -1,11 +1,5 @@
-.cantact {
-    background-image: url('../../../public/images/pa.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: overlay;
-    position: relative;
-    padding: 4rem 0; /* Espacement autour */
+.cantac{
+    background-color: aquamarine;
   }  
   
 
